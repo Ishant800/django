@@ -140,23 +140,29 @@
             <p>Please login to continue to your account</p>
         </div>
 
-        <form>
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+        
             <div class="input-group">
-                <input type="email" placeholder=" " required>
+                <input type="email" placeholder=" " name="emailAddress" required>
                 <label>Email Address</label>
             </div>
-
+        
             <div class="input-group">
-                <input type="password" placeholder=" " required>
+                <input type="password" placeholder=" " name="password" required>
                 <label>Password</label>
             </div>
-
+        
             <button type="submit" class="login-btn">Sign In</button>
         </form>
-
+        
         <div class="additional-links">
-            <p>Don't have an account? <a href="register">Register here</a></p>
+            <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
         </div>
-    </div>
+        
 </body>
 </html>

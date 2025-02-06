@@ -7,8 +7,10 @@ from .views.auth_view import login
 
 
 urlpatterns = [
-    path("",home),
-    path("register/",register),
-    path("login/",login),
-    path("create",create_blog)
+   
+    path("register/",register, name="register"),
+    path("login/",login,name="login"),
+  
+     path('', home, name='home'),
+    path('create/', create_blog, name='create_blog'),
 ]

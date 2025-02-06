@@ -12,3 +12,10 @@ class Blog(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     
     
+class Register(models.Model):
+    fullName = models.CharField(max_length=100)
+    emailAddress = models.CharField(max_length=200)
+    password = models.CharField(max_length=100)
+    regesiter_at = models.DateTimeField(auto_now_add=True)
+    
+    

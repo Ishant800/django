@@ -24,7 +24,9 @@ SECRET_KEY = 'django-insecure-b9e&oceaya@(@z$s9gc6m*o64v@+la)2zwn02j0dc3ybfz6%=b
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# APPEND_SLASH=False
 
+  
 ALLOWED_HOSTS = []
 
 
@@ -110,7 +112,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'UTC' 
+LOGIN_URL = "/blog/login"
+ 
 
 USE_I18N = True
 

@@ -145,19 +145,20 @@
             <p>Join our community and start your journey</p>
         </div>
 
-        <form>
+        <form method="POST" action="{% url "register" %}">
+            {% csrf_token %}
             <div class="input-group">
-                <input type="text" required>
+                <input type="text" name="fullName" required>
                 <label>Full Name</label>
             </div>
 
             <div class="input-group">
-                <input type="email" required>
+                <input type="email" name="emailAddress" required>
                 <label>Email Address</label>
             </div>
 
             <div class="input-group">
-                <input type="password" required>
+                <input type="password" name="password" required>
                 <label>Password</label>
             </div>
 
